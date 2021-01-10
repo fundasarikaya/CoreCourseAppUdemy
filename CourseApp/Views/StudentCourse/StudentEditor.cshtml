@@ -1,0 +1,40 @@
+﻿@using  CourseApp.Models
+@model Student
+@{
+    ViewData["Title"] = "StudentEditor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="mt-4">
+    <div class="bg-success text-white p-4">
+        <div class="col">@Model.Name's Courses</div>
+    </div>
+    <form asp-action="EditStudent" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <div class="col-8 m-3">
+                @foreach (Course course in ViewBag.Courses)
+                {
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="form-control-plaintext">@course.Name</label>
+                    </div>
+                    <div class="form-group col">
+                        <label class="form-control-plaintext">@course.Price</label>
+                    </div>
+                    <div class="form-group col-1">
+                        @if (course.StudentCourses.Any(i => i.StudentId == Model.Id))
+                        {
+                            <input type="checkbox" name="courseid" value="@course.Id" checked />
+                        }
+                        else
+                        {
+                            <input type="checkbox" name="courseid" value="@course.Id"  />
+                        }
+                    </div>
+                </div>
+                }
+                <input type="submit" class="btn btn-primary" value="Submit" />
+            </div>
+        </div>
+    </form>
+</div>

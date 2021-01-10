@@ -1,0 +1,11 @@
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\obj\Release\netcoreapp2.0\CourseApp.csprojAssemblyReference.cache
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\obj\Release\netcoreapp2.0\CourseApp.csproj.CoreCompileInputs.cache
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\obj\Release\netcoreapp2.0\CourseApp.AssemblyInfoInputs.cache
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\obj\Release\netcoreapp2.0\CourseApp.AssemblyInfo.cs
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\bin\Release\netcoreapp2.0\CourseApp.deps.json
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\bin\Release\netcoreapp2.0\CourseApp.runtimeconfig.json
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\bin\Release\netcoreapp2.0\CourseApp.runtimeconfig.dev.json
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\bin\Release\netcoreapp2.0\CourseApp.dll
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\bin\Release\netcoreapp2.0\CourseApp.pdb
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\obj\Release\netcoreapp2.0\CourseApp.dll
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\obj\Release\netcoreapp2.0\CourseApp.pdb

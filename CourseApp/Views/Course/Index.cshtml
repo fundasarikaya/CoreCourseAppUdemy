@@ -1,0 +1,95 @@
+﻿@model IEnumerable<CourseApp.Models.Course>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="m-4">
+    <div class="bg-success text-white p-4">
+        Course List
+    </div>
+    <div class="card my-2">
+        <div class="card-body">
+            <form method="get" id="filter">
+                <div class="form-group">
+                    <input name="name" class="form-control" placeholder="Course Name" value="@ViewBag.Name">
+                </div>
+                <div class="form-group">
+                    <input name="price" class="form-control" placeholder="Min Price" value="@ViewBag.Price">
+                </div>
+                <div class="custom-control custom-checkbox mb-2">
+                    <input name="isActive" type="checkbox" class="custom-control-input" id="isActive" checked="@ViewBag.isActive">
+                    <label class="custom-control-label" for="isActive">Active</label>
+                </div>
+                <button class="btn btn-primary">Filter</button>
+            </form>
+        </div>
+    </div>
+    @*<button onclick="yazdir('print')">Yazdır</button>*@
+    <table class="table table-bordered table-striped" id="print">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>isActive</th>
+                <th>Instructor</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>@item.isActive</td>
+                    <td>@item.Instructor?.Name</td> @*?koydum cunku null olabilr*@
+                    <td>
+                        <form asp-action="Delete" method="post">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Edit</a>
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+    <a asp-action="Create" class="btn btn-primary">Create</a>
+</div>
+@*<script>
+    var otomatikyazdir = true;
+    function yazdir(divalan) {
+        if (document.getElementById != null) {
+            var inclcss = '<link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>';
+
+            var html = '<HTML>\n<HEAD>\n' + inclcss + '\n';
+            if (document.getElementsByTagName != null) {
+                var headTags = document.getElementsByTagName("head");
+                if (headTags.length > 0) html += headTags[0].innerHTML;
+            }
+            html += '\n</HEAD>\n<BODY>\n';
+            delete headTags;
+            var printReadyElem = document.getElementById(divalan);
+            if (printReadyElem != null) html += printReadyElem.innerHTML;
+            else {
+                alert("Hata, yazdırılacak alan bulunamadı.");
+                return;
+            }
+            html += '\n</BODY>\n</HTML>';
+            delete printReadyElem;
+            var printWin = window.open("", "processPrint");
+            printWin.document.open();
+            printWin.document.write(html);
+            printWin.document.close();
+            setTimeout(function () {
+                if (otomatikyazdir) { printWin.print(); }
+            }, 100);
+            delete html;
+            delete inclcss;
+            delete printWin;
+        } else alert("Tarayıcı desteklenmiyor.");
+    }
+</script>*@
+

@@ -1,0 +1,9 @@
+{
+  "version": "2.0.0", //burasý 1.0.0 idi
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "bootstrap": "4.1.3",
+    "jquery": "3.3.1"
+  }
+}

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<CourseApp.Models.Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Contact</h2>
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <p>
+            @item.Email<br>
+        @item.Phone
+    </p>
+
+}
+</div>
+

@@ -1,0 +1,83 @@
+﻿@model CourseApp.Models.Course
+@{
+    ViewData["Title"] = ViewBag.ActionMode;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="m-4">
+    <div class="bg-success text-white p-4">
+        Course @ViewBag.ActionMode
+    </div>
+    <form asp-action="@(ViewBag.ActionMode)" method="post">
+        @*create ve edit controllerlarının cshtml sayfaları aynı mantıkla oldugu icin farklı view oluşturmaya gerek yok oyuzden viewbag ile işlem ne yapılmak isteniyorsa ona yonlendilril*@
+        <input type="hidden" name="orginal.Id" value="@Model.Id" />
+        <input type="hidden" name="orginal.Name" value="@Model.Name" />
+        <input type="hidden" name="orginal.Description" value="@Model.Description" />
+        <input type="hidden" name="orginal.Price" value="@Model.Price" />
+        <input type="hidden" name="orginal.isActive" value="@Model.isActive.ToString()" />
+
+        <input type="hidden" name="orginal.Instructor.Id" value="@Model.Instructor?.Id" />
+        <input type="hidden" name="orginal.Instructor.Name" value="@Model.Instructor?.Name" />
+      @*  <input type="hidden" name="orginal.Instructor.City" value="@Model.Instructor?.City" />*@
+        @* buradaki orginal. olanların hepsini controller tarafındaki course orginal tarafında tutulur*@
+
+        <div class="row">
+            <div class="col-6">
+                <div class="bg-primary text-white p-2 mt-3">
+                    Course
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <input asp-for="Description" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price"></label>
+                    <input asp-for="Price" class="form-control" />
+                </div>
+                <div class="custom-control custom-checkbox mb-2">
+                    @*mb-2 marginbottom 2 demek*@
+                    <input asp-for="isActive" class="custom-control-input" />
+                    <label class="custom-control-label" asp-for="isActive"></label>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="bg-primary text-white p-2 mt-3">
+                    Instructor 
+                </div>
+                <input type="hidden" name="Instructor.Id" />
+                <div class="form-group">
+                    <label asp-for="Instructor.Name"></label>
+                    <input asp-for="Instructor.Name" class="form-control" />
+                </div>
+                @*<div class="form-group">
+            <label asp-for="Instructor.City"></label>
+            <input asp-for="Instructor.City" class="form-control" />
+        </div>*@
+                <div class="form-group">
+                    <label asp-for="Instructor.Contact.Email"></label>
+                    <input asp-for="Instructor.Contact.Email" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Instructor.Contact.Phone"></label>
+                    <input asp-for="Instructor.Contact.Phone" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Instructor.Contact.Address.City"></label>
+                    <input asp-for="Instructor.Contact.Address.City" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Instructor.Contact.Address.Country"></label>
+                    <input asp-for="Instructor.Contact.Address.Country" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Instructor.Contact.Address.Text"></label>
+                    <input asp-for="Instructor.Contact.Address.Text" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

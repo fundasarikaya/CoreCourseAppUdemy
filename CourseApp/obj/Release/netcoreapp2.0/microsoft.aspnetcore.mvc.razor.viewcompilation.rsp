@@ -1,0 +1,14 @@
+C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=CourseApp
+--content-root=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\AddData\AddRequest.cshtml
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\AddData\Index.cshtml
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\AddData\List.cshtml
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\AddData\Thanks.cshtml
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\Course\Edit.cshtml
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\Course\Index.cshtml
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\Home\Index.cshtml
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\Shared\_Layout.cshtml
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\_ViewImports.cshtml
+--file=C:\Projeler\visual studio projects\EntityFrameworkCoreUdemy\CourseApp\CourseApp\CourseApp\Views\_ViewStart.cshtml

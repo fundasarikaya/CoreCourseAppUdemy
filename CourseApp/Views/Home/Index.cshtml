@@ -1,0 +1,20 @@
+﻿@model CourseApp.Models.Request
+@{
+    ViewData["Title"] = "Hello World!!!";
+}
+<link href="~/vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+@*<script src="~/node_modules/jquery/dist/jquery.js"></script> vendor yapki istek gelince npm a ulaşabilsin*@
+<script src="~/vendor/jquery/dist/jquery.js"></script>
+<h2>Index</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World!!!</title>
+</head>
+<body>
+    @Model.Name <br />
+    @Model.Email <br />
+    @Model.Phone <br>
+    @Model.Message <br />
+</body>
+</html>
